@@ -1,0 +1,4 @@
+"0","statepopulation <- statepop(""CENSUS_KEY"", 2006, 2016, TRUE)"
+"0","#Convert full state names to abbreviations"
+"0","statepopulation$state <- state.abb[statepopulation$state]"
+"0","statepopulation$popest <- as.numeric(levels(statepopulation$popest))[statepopulation$popest]"

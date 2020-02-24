@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1576266307631.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1937431610",
+    "id" : "BCBE2BA9",
+    "lastKnownWriteTime" : 1576272745,
+    "last_content_update" : 1576272745523,
+    "path" : "~/Documents/GitHub/Xian_Qu/Final_Project/legen/R/legen.R",
+    "project_path" : "R/legen.R",
+    "properties" : {
+        "cursorPosition" : "20,181",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

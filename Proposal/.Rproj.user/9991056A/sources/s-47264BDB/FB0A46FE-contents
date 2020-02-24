@@ -1,0 +1,41 @@
+---
+title: "QMSS G5072 Final Project Proposal"
+author: "Xian Qu"
+date: "11/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Name of project:** "What Drives for Local Entrepreneurships?" \
+\
+**Type of project:** Data (A1) \
+\
+**Brief description of the purpose:** This project aims to explore the several key drivers of entrepreneurships by state level ranging from venture capital investments, real GDP, number of patents issued, corruptions etc. \
+\
+**Links to data sources / API etc.:** \
+1. [Entrepreneurship data](https://dataverse.harvard.edu/file.xhtml?persistentId=doi%3A10.7910%2FDVN%2FBMRPVH%2F0WQQMT&version=2.0): This data is obtained from the startup cartography project created by Prof. Guzman and his fellow colleagues. They collected the number of new businesses registered for each state in the United States from 1998 to 2016. The data can be downloaded in the *Rdata* format. 
+
+
+2. Real GDP data: This data is published in the US Census Bureau website and can be pulled using a Census API key. The US Census Bureau is a principal agency of the U.S. Federal Statistical System, responsible for producing data about the American people and economy. The US Census Bureau database is constantly updated and accessible at all times. The Census Data API allows users to  request data from U.S. Census Bureau datasets. API requests can be tailored to retrieve data according to their geography, time and more. [The Census API documentation is available on US Census Bureau’s website.](https://www.census.gov/content/dam/Census/data/developers/api-user-guide/api-guide.pdf). The response is in JSON format. 
+
+
+3. [Patents data](https://www.uspto.gov/web/offices/ac/ido/oeip/taf/cst_utl.htm): This data is published by U.S. PATENT AND TRADEMARK OFFICE. It collected the Number of Patents Granted as Distributed by Year of Patent Grant during 01/01/1963 - 12/31/2015. I will create a *web scrapping function* to obtain the patent data. 
+
+
+4. Corruptions data: I've considered two measurements for corruption, one is the number of news articles with 'corruption' and the 'state name' in their headlines via Lexis Nexis. [The API documentation is on their website.](http://help.lexisnexis.com/tabula-rasa/nexisuni/urlapi_group_ref-reference?lbu=US&locale=en_US&audience=all) Another measurement is through google trends. [The API documentation is available here.] (https://www.npmjs.com/package/google-trends-api)
+
+
+5. [Venture capital investments data](https://www.pwc.com/us/en/industries/technology/moneytree/explorer.html#/type=history&category=&currentQ=Q3%202018&qRangeStart=Q1%202000&qRangeEnd=Q3%202019&chartType=bar): This data is collected by PWC MoneyTrees and can be downloaded in Office Open XML spreadsheet format.   
+
+
+**Outline the technical steps / challenges you plan to address and include in your submission:**  \
+There are essentially two technical steps: 1) Create the web scrapping function to get patent data. 2) Create API functions to gather real GDP and corruption data.  
+
+
+**Are there any significant hurdles that you have doubts about? Would not solving them render the project incomplete?** \
+I'm currently having difficulties to automatically obtain measures for corruption. There is no Nexis API client available on the Internet. When I tried to create an API function there's this autentication error that keeps popping up. I got access to the database via Columbia University library without registering for an account. There website did not mention how to acquire an API key. I've called Nexis support team and they told me to contact school librarians if I'm using Nexis Uni. I then emailed the library and they told me to download the data manually for each state. I would really want to automate this process however. 
+
+

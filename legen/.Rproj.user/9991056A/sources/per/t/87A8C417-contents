@@ -1,0 +1,27 @@
+# NYTIMES API Key
+NYTIMES_KEY=A9jQf4Ez37UJ1m2n
+# App Token for https://data.lacity.org
+    LACRIME_APP_TOKEN = 5KJTa1oLfVE6H9pzDrJX8T30X
+    LACRIME_SECRET_TOKEN = 5tmphZD49ZIkVGscMVoToi1E8hE9-9e1mhNw
+# GOOGLE MAPS Key
+AIzaSyBFfRtcsZFd8ATI1JqLWBbnAnkNU23twSo
+
+# API Key for Enigma
+ENIGMA_KEY = FaAtqK7ZKDhrxvEfuIfuUTOaIv365Zhlc26emMthrxa6vZ3SCtQE9
+
+# API Key for Twitter
+
+# API Key for Zillow
+ZILLOW_KEY = X1-ZWz17jjbjl0aa3_6le3g
+
+# API Key for OpenWeather
+OPENWEATHER_KEY = 4a39d868e6374791cdd5aa42eee39ca4
+# API Key for WeatherUnderground
+WEATHERUG_KEY = 5034be4172b44cd2b4be4172b44cd2d6
+
+# API Key for Harvard Dataverse
+HARVARDDATA_KEY=82d5ae7f-73cd-4e44-805c-43dca6e43e83
+
+# API Key for US Census Data
+CENSUS_KEY=1a8b53f7a5b81c10e2fbc5c247e5619807728cfe
+

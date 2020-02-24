@@ -1,0 +1,4 @@
+"0","dbWriteTable(connection, value = patent, name = ""MyTable"", append = TRUE )"
+"2","Error in dbWriteTable(connection, value = patent, name = ""MyTable"", append = TRUE) : 
+  object 'connection' not found
+"

@@ -1,0 +1,6 @@
+"0","patent <- patent(2006, 2016)"
+"0","patent <- patent %>% "
+"0"," dplyr::rename("
+"0","   state = CODE,"
+"0","   patentgranted = TOTALS)"
+"0","patent$patentgranted <- as.numeric(as.factor(patent$patentgranted))"

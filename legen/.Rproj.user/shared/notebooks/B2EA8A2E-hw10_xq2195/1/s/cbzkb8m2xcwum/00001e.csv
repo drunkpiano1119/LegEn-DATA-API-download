@@ -1,0 +1,12 @@
+"0","library(DBI)"
+"0","library(RMySQL)"
+"0","mydb = dbConnect("
+"0","  RMySQL::MySQL(), "
+"0","  user=""root"", "
+"0","  password= ""mds-is-hard"", "
+"0","  dbname=""legen"", "
+"0","  host=""localhost"","
+"0","  port = 3306)"
+"2","Error in .local(drv, ...) : 
+  Failed to connect to database: Error: Unknown database 'legen'
+"

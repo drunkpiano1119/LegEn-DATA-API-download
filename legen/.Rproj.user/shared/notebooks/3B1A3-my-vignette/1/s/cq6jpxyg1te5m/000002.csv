@@ -1,0 +1,4 @@
+"0","HarvardData <- HdDataverse(""doi:10.7910/DVN/BMRPVH/0WQQMT"", ""HARVARDDATA_KEY"")"
+"0","HarvardData <- HarvardData %>% "
+"0"," dplyr::rename(state = StateAbbr) %>%"
+"0"," dplyr::filter(year >= 2006 & year <= 2016)"

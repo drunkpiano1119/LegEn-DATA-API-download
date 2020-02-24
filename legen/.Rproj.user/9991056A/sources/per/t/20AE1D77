@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1576267265405.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2524318463",
+    "id" : "20AE1D77",
+    "lastKnownWriteTime" : 1576272792,
+    "last_content_update" : 1576272792,
+    "path" : "~/Documents/GitHub/Xian_Qu/Final_Project/legen/NAMESPACE",
+    "project_path" : "NAMESPACE",
+    "properties" : {
+        "cursorPosition" : "12,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : true,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_namespace"
+}

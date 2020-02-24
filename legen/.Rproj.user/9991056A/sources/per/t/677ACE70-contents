@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# legen
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of legen is to explore the several key drivers of entrepreneurships by state level ranging from venture capital investments, real GDP, number of patents issued, corruptions etc.
+
+## Installation
+
+You can install the released version of legen from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("legen")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(legen)
+## basic example code
+HarvardData <- HdDataverse("doi:10.7910/DVN/BMRPVH/0WQQMT", "HARVARDDATA_KEY")
+corruption <- locsent("corruption", 2006, 2016)
+patent <- patent(2006, 2016)
+statepopulation <- statepop("CENSUS_KEY", 2006, 2016, TRUE)
+```

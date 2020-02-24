@@ -1,0 +1,4 @@
+"0","#Searches for corruption in each state across time"
+"0","library(ggplot2)"
+"0","ggplot(data = legen, aes(x = year, y = trends, group = state, color = state)) +"
+"0","  geom_line()"

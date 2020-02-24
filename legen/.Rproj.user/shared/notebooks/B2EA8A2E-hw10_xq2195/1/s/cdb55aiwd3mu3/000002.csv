@@ -1,0 +1,18 @@
+"0","library(DBI)"
+"0","library(knitr)"
+"0","library(kableExtra)"
+"2","
+Attaching package: ‘kableExtra’
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    group_rows
+
+"
+"0","library(RMySQL)"
+"0","drv <- dbDriver(""MySQL"")"
+"0","con <- dbConnect(drv, username=""root"", password="""", dbname =""legen"", host=""localhost"")"
+"2","Error in .local(drv, ...) : 
+  Failed to connect to database: Error: Plugin caching_sha2_password could not be loaded: dlopen(lib/mariadb/plugin/caching_sha2_password.so, 2): image not found
+"

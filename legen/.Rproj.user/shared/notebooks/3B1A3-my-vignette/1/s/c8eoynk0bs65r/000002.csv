@@ -1,0 +1,3 @@
+"0","legen1 <- merge(statepopulation, patent, by=c(""year"",""state""))"
+"0","legen2 <- merge(corruption, HarvardData, by=c(""year"",""state""))"
+"0","legen <- merge(legen1, legen2, by=c(""year"",""state""))"

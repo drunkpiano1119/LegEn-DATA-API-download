@@ -1,0 +1,2 @@
+"0","library(plm)"
+"0","pdata <- pdata.frame(legen, index = c(""state"", ""year""))"

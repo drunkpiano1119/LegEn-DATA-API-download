@@ -1,0 +1,3 @@
+"0","#Convert the dataframe from wide to long"
+"0","library(tidyr)"
+"0","VentureC <- gather(vc, year, vc, c(`2002`:`2016`), factor_key=TRUE)"

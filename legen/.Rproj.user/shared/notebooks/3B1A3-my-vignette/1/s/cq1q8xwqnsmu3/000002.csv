@@ -1,0 +1,4 @@
+"0","#Select data from 2006 to 2016"
+"0","VentureC$year <- as.numeric(levels(VentureC$year))[VentureC$year]"
+"0","VentureC %>%"
+"0"," dplyr::filter(year >= 2006 & year <= 2016)"

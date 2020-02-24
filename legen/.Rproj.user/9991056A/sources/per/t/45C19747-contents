@@ -1,0 +1,126 @@
+---
+title: "What Drives for Local Entrepreneurships?"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r setup}
+library(legen)
+```
+
+####Call the Venture Capital investment data saved under the *data* folder in this package 
+```{r}
+data(vc)
+```
+
+```{r}
+#Convert the dataframe from wide to long
+library(tidyr)
+VentureC <- gather(vc, year, vc, c(`2002`:`2016`), factor_key=TRUE)
+```
+
+```{r}
+#Select data from 2006 to 2016
+VentureC$year <- as.numeric(levels(VentureC$year))[VentureC$year]
+VentureC %>%
+ dplyr::filter(year >= 2006 & year <= 2016)
+```
+
+
+####Collect entrepreneurs data from Harvard Dataverse
+```{r,  message=FALSE}
+HarvardData <- HdDataverse("doi:10.7910/DVN/BMRPVH/0WQQMT", "HARVARDDATA_KEY")
+HarvardData <- HarvardData %>% 
+ dplyr::rename(state = StateAbbr) %>%
+ dplyr::filter(year >= 2006 & year <= 2016)
+```
+
+####Collect corruption data from Google Trends
+
+```{r, message=FALSE}
+corruption <- locsent("corruption", 2006, 2016)
+#Rename columns
+corruption <- corruption %>% 
+ dplyr::rename(
+   year = date,
+   state = location,
+   trends = hits)
+#Convert full state names to abbreviations
+library(datasets)
+corruption$state <- state.abb[corruption$state]
+corruption$trends <- as.numeric(corruption$trends)[corruption$trends]
+```
+####Collect population data for each states
+```{r}
+statepopulation <- statepop("CENSUS_KEY", 2006, 2016, TRUE)
+#Convert full state names to abbreviations
+statepopulation$state <- state.abb[statepopulation$state]
+statepopulation$popest <- as.numeric(levels(statepopulation$popest))[statepopulation$popest]
+```
+####Collect the number of patents granted for each states
+```{r, warning=FALSE}
+patent <- patent(2006, 2016)
+patent <- patent %>% 
+ dplyr::rename(
+   state = CODE,
+   patentgranted = TOTALS)
+patent$patentgranted <- as.numeric(as.factor(patent$patentgranted))
+```
+
+####Combine datasets into a single dataframe for analysis
+```{r}
+legen1 <- merge(statepopulation, patent, by=c("year","state"))
+legen2 <- merge(corruption, HarvardData, by=c("year","state"))
+legen <- merge(legen1, legen2, by=c("year","state"))
+```
+
+####Descriptive Analysis
+```{r}
+summary(legen)
+```
+
+
+```{r}
+#Searches for corruption in each state across time
+library(ggplot2)
+ggplot(data = legen, aes(x = year, y = trends, group = state, color = state)) +
+  geom_line()
+```
+Several peaks are observed (e.g. 2008, 2012, 2015). Perhaps there are some nation-wide corruption scandels at that time. 
+
+```{r, message=FALSE}
+library(plm)
+pdata <- pdata.frame(legen, index = c("state", "year"))
+```
+
+```{r}
+linearMod <- plm(obs ~ popest + patentgranted + trends, data=pdata, modeling = "random")
+summary(linearMod)
+```
+We can conclude that an increase in the population estimates for each state leads to 0.004 more entrepreneurs in that state. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

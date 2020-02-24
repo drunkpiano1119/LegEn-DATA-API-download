@@ -1,0 +1,33 @@
+Package: legen
+Type: Package
+Title: Collect and Study the Drivers for Local Entrepreneurships
+Version: 0.1.0
+Author: Xian Qu
+Maintainer: The package maintainer <xq2195@columbia.edu>
+Description: 
+    This project aims to explore the several key drivers of entrepreneurships 
+    by state level ranging from venture capital investments, real GDP, number of patents 
+    issued, corruptions etc.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    httr,
+    gtrendsR,
+    stringr,
+    gtools,
+    hydrostats,
+    rvest,
+    tibble,
+    tidyr,
+    xml2,
+    ggplot2,
+    plm,
+    rlang
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.1.99.9001
+Depends: R (>= 2.10)

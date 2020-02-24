@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1576103628714.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3975777099",
+    "id" : "77C867C",
+    "lastKnownWriteTime" : 1576270659,
+    "last_content_update" : 1576270659247,
+    "path" : "~/Documents/GitHub/Xian_Qu/Final_Project/legen/R/functions.R",
+    "project_path" : "R/functions.R",
+    "properties" : {
+        "cursorPosition" : "217,12",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
